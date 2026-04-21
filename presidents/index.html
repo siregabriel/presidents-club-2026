@@ -167,7 +167,7 @@ tbody tr.total-row td{font-weight:600;color:var(--gold-light);}
   <nav class="tabs">
     <button class="tab-btn active" onclick="showTab('leaderboard',this)">🏅 Leaderboard</button>
     <button class="tab-btn" onclick="showTab('monthly',this)">📊 Monthly Scores</button>
-    <button class="tab-btn" onclick="showTab('import',this)">📥 Import Data</button>
+    <!--<button class="tab-btn" onclick="showTab('import',this)">📥 Import Data</button>-->
     <button class="tab-btn" onclick="showTab('points',this)">📋 Point System</button>
   </nav>
 </header>
@@ -179,7 +179,7 @@ tbody tr.total-row td{font-weight:600;color:var(--gold-light);}
     <div class="stat-card"><div class="s-label">Magic Number</div><div class="s-value">476</div><div class="s-sub">Points to qualify</div></div>
     <div class="stat-card"><div class="s-label">Top Score</div><div class="s-value" id="stat-top">—</div><div class="s-sub" id="stat-top-name">—</div></div>
     <div class="stat-card"><div class="s-label">Avg Points</div><div class="s-value" id="stat-avg">—</div><div class="s-sub">Across all communities</div></div>
-    <div class="stat-card"><div class="s-label">Months Loaded</div><div class="s-value" id="stat-months">—</div><div class="s-sub" id="stat-months-names">—</div></div>
+    <div class="stat-card"><div class="s-label">Months Reported</div><div class="s-value" id="stat-months">—</div><div class="s-sub" id="stat-months-names">—</div></div>
   </div>
   <div class="lb-controls">
     <input type="text" class="search-box" placeholder="🔍  Search community…" oninput="filterLB(this.value)"/>
