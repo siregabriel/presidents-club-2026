@@ -167,7 +167,7 @@ tbody tr.total-row td{font-weight:600;color:var(--gold-light);}
   <nav class="tabs">
     <button class="tab-btn active" onclick="showTab('leaderboard',this)">🏅 Leaderboard</button>
     <button class="tab-btn" onclick="showTab('monthly',this)">📊 Monthly Scores</button>
-    <!--<button class="tab-btn" onclick="showTab('import',this)">📥 Import Data</button>-->
+    <button class="tab-btn" onclick="showTab('import',this)">📥 Import Data</button>
     <button class="tab-btn" onclick="showTab('points',this)">📋 Point System</button>
   </nav>
 </header>
@@ -309,6 +309,7 @@ const DEFAULT_PROPERTIES = [
 const DEFAULT_MONTHLY = {
   'January':  [62,38,15,53,27,1,48,71,49,6,12,9,14,40,-4,38,10,14,53,4,9,0,10,21,9,8,27,14,34,45,20,37,42,-4],
   'February': [52,30,6,36,34,19,42,50,40,20,0,17,26,28,19,27,-4,-3,48,0,12,4,16,21,16,9,24,14,27,24,24,33,54,1],
+  'March':    [64,46,-4,35,53,12,38,14,61,6,9,-4,14,29,20,29,-4,9,58,26,15,24,25,12,24,3,10,41,34,29,40,32,42,16],
 };
 
 let properties = [...DEFAULT_PROPERTIES];
