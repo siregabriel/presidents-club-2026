@@ -301,17 +301,17 @@ const DEFAULT_PROPERTIES = [
   'Legacy Savannah Quarters','Madison Oviedo','Madison Ocoee','Madison Clermont','Legacy Reserve Old Town',
   'Legacy Ridge at Marietta','Legacy Ridge at Alpharetta','Lake Howard Heights','The Goldton at St Pete',
   'KPMH','The Goldton at Southaven','The Goldton at Athens','The Goldton at Spring Hill',
-  'The Goldton at Venice','The Goldton at Adelaide','The Goldton at Lake Nona','Canopy at Westridge',
+  'The Goldton at Venice','The Goldton at Adelaide','The Goldton at Lake Nona','WILDCAT','Canopy at Westridge',
   'Monark Madison','Monark Greystone','The Goldton at Jones Farm',
-  'Tribute at Black Hill','Tribute at the Glen','Tribute at Melford',
-  'Tribute at One Loudoun','The Overlook at Suwanee'
+  'Tribute at Black Hill','Tribute at the Glen','Tribute at One Loudoun','Tribute at Melford',
+  'Suwanee','The Oscar at V'
 ];
 const DEFAULT_MONTHLY = {
-  'January':  [62,38,15,53,27,1,48,71,49,6,12,9,14,40,-4,38,10,14,53,4,9,0,10,21,9,8,27,14,34,45,20,37,42,-4],
-  'February': [57,30,6,36,34,19,42,50,40,20,0,17,26,28,19,27,-4,-3,48,0,12,4,16,21,16,9,24,14,27,24,24,33,54,1],
-  'March':    [64,46,-4,35,53,12,38,14,61,6,9,-4,14,29,20,29,-4,9,58,26,15,24,25,12,24,3,41,41,34,29,40,32,42,16],
-  'April':    [55,43,1,38,65,22,38,4,54,6,26,-4,14,39,21,19,7,18,45,22,37,42,54,37,34,26,4,43,30,19,38,18,46,37,10],
-  'May':      [55,49,1,46,45,36,12,51,60,25,9,9,18,44,4,1,10,-3,58,2,27,5,14,39,20,11,2,36,5,21,19,43,45,25,19],
+  'January':  [62,38,15,53,27,1,48,71,49,6,12,9,14,40,-4,38,10,14,53,4,9,0,10,21,9,11,8,27,14,34,45,20,37,42,-4,null],
+  'February': [57,30,6,36,34,19,42,50,40,20,0,17,26,28,19,27,-4,-3,48,0,12,4,16,21,16,19,9,24,14,27,24,24,33,54,1,null],
+  'March':    [64,46,-4,35,53,12,38,14,61,6,9,-4,14,29,20,29,-4,9,58,26,15,24,25,12,24,3,10,41,34,29,40,27,32,42,16,null],
+  'April':    [55,43,1,38,65,22,38,4,54,6,26,-4,14,39,21,19,7,18,45,22,37,42,54,37,34,26,4,43,30,19,38,18,46,37,10,null],
+  'May':      [55,49,1,46,45,36,12,51,60,25,9,9,18,44,4,1,10,-3,58,2,27,5,14,39,20,11,2,36,5,21,19,43,45,25,19,null],
 };
 
 let properties = [...DEFAULT_PROPERTIES];
@@ -333,7 +333,7 @@ function showTab(id, btn) {
 // ── LEADERBOARD ──
 function buildLB() {
   return properties.map((name, i) => {
-    const current = Object.values(monthlyData).reduce((s, arr) => s + (arr[i] ?? 0), 0);
+    const current = Object.values(monthlyData).reduce((s, arr) => s + (arr[i] ?? 0 ?? 0), 0);
     return { name, current, deficit: MAGIC - current };
   });
 }
